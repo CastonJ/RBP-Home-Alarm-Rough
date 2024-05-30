@@ -39,7 +39,7 @@ def send_mail(): #the texting portion
     
 while True:
     
-    if GPIO.input(12)==0: #trigger if sensor has detected something
+    if GPIO.input(12)==0: 
         TEXT = 'Master Window'
         GPIO.output(24, 0)
         send_mail()
@@ -47,10 +47,10 @@ while True:
     else:
         time.sleep(.500) #check every 5 seconds
 
-    if GPIO.input(12)==1: #trigger if sensor has detected something   
+    if GPIO.input(12)==1: 
         GPIO.output(24, 1)
 
-    if GPIO.input(25)==0: #trigger if sensor has detected something
+    if GPIO.input(25)==0: 
         TEXT = 'Outside Garage Door'
         GPIO.output(24, 0)
         send_mail()
@@ -58,10 +58,10 @@ while True:
     else:
         time.sleep(.500) #check every 5 seconds
 
-    if GPIO.input(25)==1: #trigger if sensor has detected something   
+    if GPIO.input(25)==1:   
         GPIO.output(24, 1)
                             
-    if GPIO.input(4)==0: #trigger if sensor has detected something
+    if GPIO.input(4)==0: 
         TEXT = 'Sliding Glass Door'
         GPIO.output(24, 0)
         send_mail()
@@ -69,11 +69,11 @@ while True:
     else:
         time.sleep(.500) #check every 5 seconds
     
-    if GPIO.input(4)==1: #trigger if sensor has detected something   
+    if GPIO.input(4)==1:    
         GPIO.output(24, 1)
         
                 
-    if GPIO.input(17)==0: #trigger if sensor has detected something
+    if GPIO.input(17)==0: 
         TEXT = 'Front Door'
         GPIO.output(24, 0)
         send_mail()
@@ -81,10 +81,10 @@ while True:
     else:
         time.sleep(.500) #check every 5 seconds
 
-    if GPIO.input(17)==1: #trigger if sensor has detected something   
+    if GPIO.input(17)==1: 
         GPIO.output(24, 1)
 
-    if GPIO.input(27)==0: #trigger if sensor has detected something
+    if GPIO.input(27)==0: 
         TEXT = 'Back Window'
         GPIO.output(24, 0)
         send_mail()
@@ -92,10 +92,10 @@ while True:
     else:
         time.sleep(.500) #check every 5 seconds
 
-    if GPIO.input(27)==1: #trigger relay if sensor has detected something   
+    if GPIO.input(27)==1:   
         GPIO.output(24, 1)
 
-    if GPIO.input(22)==0: #trigger if sensor has detected something
+    if GPIO.input(22)==0: 
         TEXT = 'Garage Door'
         GPIO.output(24, 0)
         send_mail()
@@ -103,7 +103,7 @@ while True:
     else:
         time.sleep(.500) #check every 5 seconds
 
-    if GPIO.input(22)==1: #trigger relay if sensor has detected something   
+    if GPIO.input(22)==1:    
         GPIO.output(24, 1)
         
 
